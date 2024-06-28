@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEYAHAT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            background-image: url();
+            background-repeat: no-repeat;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #c94a4a;
+        }
+        .container {
+            background-color: rgb(165, 159, 255);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            margin: 10px 0;
+        }
+        .result {
+            margin-top: 20px;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        select, button {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>YAPTIĞINIZ SEÇİMLER</h1>
+        <p>Lütfen gitme saatini, otobüs adını ve kalkış yerini seçiniz!</p>
+        <select id="timeSelect">
+            <option value="">Gitme Saatini Seçiniz</option>
+            <option value="13.30">13.30</option>
+            <option value="15.00">15.00</option>
+            <option value="14.50">14.50</option>
+            <option value="10.35">10.35</option>
+        </select>
+        <select id="busSelect">
+            <option value="">Otobüs Adını Seçiniz</option>
+            <option value="Pamukkale Seyahat">Pamukkale Seyahat</option>
+            <option value="Yazılımcı355 Seyahat">Yazılımcı355 Seyahat</option>
+        </select>
+        <select id="locationSelect">
+            <option value="">Kalkış Yerini Seçiniz</option>
+            <option value="İzmir/Optimum">İzmir/Optimum</option>
+            <option value="İstanbul/Eyyüp Sultan">İstanbul/Eyyüp Sultan</option>
+        </select>
+        <select id="locationSelect">
+            <option value="">Varış Yerini Seçiniz</option>
+            <option value="Denizli/Pamukkale">Denizli/Pamukkale</option>
+            <option value="Manisa/Soma">Manisa/Soma</option>
+        </select>
+        <button onclick="submitChoices()">Seçimleri Gönder</button>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        function submitChoices() {
+            const timeSelect = document.getElementById('timeSelect').value;
+            const busSelect = document.getElementById('busSelect').value;
+            const locationSelect = document.getElementById('locationSelect').value;
+            
+            if (!timeSelect || !busSelect || !locationSelect) {
+                alert("Lütfen tüm seçimleri yapınız!");
+                return;
+            }
+
+            const resultMessage = `Seçtiğiniz saat: ${timeSelect}<br>Otobüs adı: ${busSelect}<br>Kalkış yeri: ${locationSelect}`;
+            document.getElementById('result').innerHTML = resultMessage;
+        }
+    </script>
+</body>
+</html>

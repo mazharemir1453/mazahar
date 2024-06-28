@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGİN</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+
+<style>
+    *{
+         margin: 0;
+         padding: 0;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: #000;
+    }
+    .login-box{
+        position: relative;
+        width: 400px;
+        height: 450px;
+        background: red;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h2{
+        font-size:2rem ;
+        color: #fff;
+        text-align: center;
+    }
+    .input-box{
+        position: relative;
+        width: 310px;
+        height: 30px 0;
+        border-bottom: 2px solid #fff;
+    }
+    .input-box label{
+        position: absolute;
+        top: 50%;
+        left:5px;
+        transform: translateY(-50%);
+      font-size: 1em;
+      color: #fff;
+      pointer-events: none;
+      transition: 0.5s;
+    }
+.input-box input:focus~label,
+.input-box input:valid~label
+{
+top: -5px;
+
+}
+    .input-box input{
+        width: 100%;
+        height: 50px;
+        background: transparent;
+        border: none;
+        outline: none;
+        font-size: 1em;
+        color: #fff;
+        padding: 0 35px 0 5px;
+
+    }
+
+    .input-box .icon{
+        position: absolute;
+        right: 8px;
+        color: #fff;
+        font-size: 1.2em;
+        line-height: 57px;
+
+    }
+    @keyframes slideInDown {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.login-box {
+    animation: slideInDown 0.5s ease forwards;
+}
+
+.input-box {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+button[type="submit"] {
+    animation: slideInLeft 0.5s ease forwards;
+}
+
+    .remember-forgot{
+        margin: -15px 0 15px;
+        font-size: .9em;
+        color: #fff;
+        display: flex;
+        justify-content: space-between;
+    }
+    .remember-forgot label input{
+        margin-right: 3px;
+    }
+    .remember-forgot a{
+        color: #fff;
+        text-decoration: none;
+    }
+    .remember-forgot a:hover{
+        text-decoration: underline;
+    }
+</style>
+</head>
+<body>
+    <div class="login-box">
+        <form action="">
+            <h2>Login</h2>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-envelope"></i></span>
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="input-box">
+                <span class="icon"><i class="fa-solid fa-lock"></i></span>
+                <input type="password" required>
+                <label>Password</label>
+            </div>
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Rember me</label>
+           <a href="#">Forgot password?</a>
+            </div>
+            <button type="submit">Login</button>
+            <div class="register-link">
+                <p>Don't have an account?<a href="#">Register</a></p>
+            </div>
+            <div class="login-box animate__animated animate__fadeIn">
+                ...
+                <div class="input-box animate__animated animate__fadeIn">
+                    ...
+                </div>
+                ...
+                <button type="submit" class="animate__animated animate__fadeIn">Login</button>
+                ...
+            </div>
+            
+        </form>
+    </div>
+</body>
+</html>

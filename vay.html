@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İlginç Hareketli Daire</title>
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+#circle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+</style>
+</head>
+<body>
+    <div id="circle"></div>
+
+    <script>
+document.addEventListener('mousemove', function(e) {
+    const circle = document.getElementById('circle');
+    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(26);
+
+    circle.style.left = e.clientX - 25 + 'px';
+    circle.style.top = e.clientY - 25 + 'px';
+    circle.style.backgroundColor = randomColor;
+
+    const randomSize = Math.random() * 50 + 20;
+    circle.style.width = randomSize + 'px';
+    circle.style.height = randomSize + 'px';
+});
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microphone Animation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #000;
+            overflow: hidden;
+        }
+        .mic {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+        }
+        .mic i {
+            font-size: 100px;
+            transition: transform 0.1s ease;
+        }
+        .mic::before, .mic::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8);
+            animation: rgb-light 2s linear infinite;
+        }
+        .mic::before {
+            width: 300px;
+            height: 300px;
+        }
+        .mic::after {
+            width: 250px;
+            height: 250px;
+            z-index: 1;
+        }
+        @keyframes rgb-light {
+            0% { box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8); }
+            33% { box-shadow: 0 0 20px 10px rgba(0, 255, 0, 0.8); }
+            66% { box-shadow: 0 0 20px 10px rgba(0, 0, 255, 0.8); }
+            100% { box-shadow: 0 0 20px 10px rgba(255, 0, 0, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    <div class="mic">
+        <i class="fa-solid fa-microphone"></i>
+    </div>
+    <script>
+        // Get the microphone icon element
+        const micIcon = document.querySelector('.mic i');
+
+        // Request access to the user's microphone
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(stream => {
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                const analyser = audioContext.createAnalyser();
+                const microphone = audioContext.createMediaStreamSource(stream);
+                const scriptProcessor = audioContext.createScriptProcessor(256, 1, 1);
+
+                analyser.smoothingTimeConstant = 0.8;
+                analyser.fftSize = 1024;
+
+                microphone.connect(analyser);
+                analyser.connect(scriptProcessor);
+                scriptProcessor.connect(audioContext.destination);
+                
+                scriptProcessor.onaudioprocess = () => {
+                    const array = new Uint8Array(analyser.frequencyBinCount);
+                    analyser.getByteFrequencyData(array);
+                    const average = array.reduce((a, b) => a + b) / array.length;
+                    const scale = Math.min(Math.max(average / 128, 1), 2);
+                    micIcon.style.transform = `scale(${scale})`;
+                };
+            })
+            .catch(err => console.error('Error accessing the microphone: ', err));
+    </script>
+</body>
+</html>

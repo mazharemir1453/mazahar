@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      * {
+        font-family: Monospace;
+      }
+      .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 1000px;
+        height: 500px;
+        margin: auto;
+        column-gap: 20px;
+      }
+      .container1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 1020px;
+        height: 500px;
+        margin: auto;
+        column-gap: 20px;
+        margin-left: 520px;
+        margin-top: -500px;
+      }
+      .containetr {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        width: 1000px;
+        height: 500px;
+        margin: auto;
+        column-gap: 20px;
+        border: 15px solid gray;
+        margin-left: 15px;
+        margin-top: 00px;
+      }
+      .satir {
+        border-radius: 15px;
+      }
+      .birinci {
+        display: grid;
+        grid-template-rows: 3fr 1fr 1fr 1fr 1fr;
+        row-gap: 5px;
+        height: 450px;
+        border-radius: 10px;
+        border: 1px solid gray;
+      }
+      .img {
+        text-align: center;
+        border-radius: 5px;
+      }
+      #resim1 {
+        border-radius: 15px;
+        margin-top: 4px;
+      }
+      .ustaciklama {
+        display: grid;
+        grid-template-columns: 4.5fr 4fr;
+        padding-top: 15px;
+        padding-left: 15px;
+      }
+      #web {
+        border-radius: 5px;
+        font-size: 15px;
+        background-color: rgb(212, 120, 200);
+        color: rgb(132, 0, 255);
+      }
+      .btn1 {
+        background-color: rgb(212, 120, 200);
+        color: rgb(132, 0, 255);
+        font-size: 17px;
+        margin-left: 30px;
+      }
+      .btn {
+        margin-left: 15px;
+        background-color: gray;
+        color: rgb(58, 58, 58);
+        font-size: 17px;
+      }
+      .aciklama {
+        padding-top: 10px;
+        padding-left: 10px;
+      }
+      #parantex {
+        margin-left: 80px;
+      }
+      .bar {
+        width: 250px;
+        border: 5px solid blueviolet;
+        background: linear-gradient(to left, blueviolet 30%, white 70%);
+        height: 5px;
+        border-radius: 15px;
+        margin-top: 15px;
+        margin-left: 20px;
+      }
+      .enalt {
+        margin-left: 15px;
+      }
+      #web1 {
+        color: rgb(255, 49, 49);
+        background-color: rgb(255, 196, 196);
+        border-radius: 5px;
+        height: 15px;
+        width: 15px;
+      }
+      .itemikinci {
+        border: 1px solid gray;
+        height: 450px;
+        border-radius: 10px;
+      }
+      .itemucuncu {
+        border: 1px solid gray;
+        height: 450px;
+        border-radius: 10px;
+      }
+      #weeeb {
+        color: green;
+        background-color: rgb(141, 255, 141);
+        width: 15px;
+        border-radius: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item birinci">
+        <div class="satir img">
+          <img
+            id="resim1"
+            src="/resimlerim/zorbuldum.jpg"
+            width="300px"
+            height="200px"
+          />
+        </div>
+        <div class="satir ustaciklama">
+          <div class="arabolme1"><span id="web"></span></div>
+          <div class="arabolme2">
+            <span id="puan">5.0</span>
+            <span style="font-size: 100%; color: orange">&starf;</span>
+            <span id="izlenmeorani"> &nbsp;&nbsp;&nbsp;&nbsp; (1.23K)</span>
+          </div>
+        </div>
+        <div class="satir aciklama">
+          <strong id="baslik">Basics of Javascript </strong><br />
+          <span
+            >Introductory course for Angular and framework basics in web
+            development. &nbsp;
+          </span>
+        </div>
+        <div class="satir">
+          <img
+            src="https://raw.githubusercontent.com/serdkan/yeni_calisma_ogrenciler/43a7c947152e4d5a503999040962f94b37cbbe74/resimler/45-clock-time.svg"
+            width="20px"
+            height="20px"
+          />
+          30 minutes
+          <br />
+          <div class="bar"></div>
+        </div>
+        <div class="satir enalt">
+          <button class="btn">Start Over</button
+          ><button class="btn1">Continue ></button>
+        </div>
+      </div>
+      <div class="itemikinci">
+        <div class="satir img">
+          <img
+            id="resim1"
+            src="https://tema.tcdd.gov.tr/v9.7/assets/img/pages/app-academy-tutor-2.png"
+            width="300px"
+            height="200px"
+          />
+        </div>
+        <div class="satir ustaciklama">
+          <div class="arabolme1">
+            <span id="web1"></span> <span id="parantex"></span>
+          </div>
+          <div class="arabolme2">
+            <span id="puan">5.0</span>
+            <span style="font-size: 100%; color: orange">&starf;</span>
+            <br />
+          </div>
+          <br /><br />
+        </div>
+        <div class="satir aciklama">
+          <strong id="baslik"> Figma & More</strong><br />
+          <span
+            >Introductory course for design and framework basics in web
+            development. &nbsp;
+          </span>
+        </div>
+        <div class="satir">
+          <img
+            src="https://raw.githubusercontent.com/serdkan/yeni_calisma_ogrenciler/43a7c947152e4d5a503999040962f94b37cbbe74/resimler/45-clock-time.svg"
+            width="20px"
+            height="20px"
+          />
+          <span id="zamns"> 30 minutes</span><br />
+          <br />
+          <div class="bar"></div>
+        </div>
+        <br />
+        <div class="satir enalt">
+          <img src="" width="15px" height="15px" />
+          <button class="btn">Start Over</button
+          ><button class="btn1">Continue</button>
+        </div>
+      </div>
+      <div class="itemucuncu">
+        <div class="satir img">
+          <img
+            id="resim1"
+            src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRn4WMkI-mMXnrB43SJuIIKAhOhDQM8M9J0iaUYR1eykGhKk22J"
+            width="300px"
+            height="200px"
+          />
+        </div>
+        <div class="satir ustaciklama">
+          <div class="arabolme1"><span id="weeeb"></span></div>
+          <div class="arabolme2">
+            <span id="puan686">5.0</span>
+            <span style="font-size: 100%; color: orange">&starf;</span>
+            <span id="izlenmeorangutani">
+              &nbsp;&nbsp;&nbsp;&nbsp; (1.23K)</span
+            >
+          </div>
+          <br />
+        </div>
+        <div class="satir aciklama">
+          <strong id="baslik1526/">Basics of Javascript </strong><br />
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, cum!
+          </p>
+          <span> </span>
+        </div>
+        <div class="satir">
+          <img
+            src="https://raw.githubusercontent.com/serdkan/yeni_calisma_ogrenciler/43a7c947152e4d5a503999040962f94b37cbbe74/resimler/45-clock-time.svg"
+            width="20px"
+            height="20px"
+          />
+          <span id="time">33 time</span>
+          <br />
+          <div class="bar"></div>
+          <br />
+        </div>
+        <div class="satir enalt">
+          <button class="btn">Start Over</button
+          ><button class="btn1">Continue</button>
+        </div>
+      </div>
+    </div>
+    <script>
+      let dersler = [
+        {
+          derskategori: "Web",
+          puan: "4.4",
+          izlenmeorani: "(1.23K)",
+          baslik: "Basics of Angular",
+        },
+        {
+          derskategori: "UI/UX",
+          puan: "4.2",
+          zaman: "16 hours",
+          izlenmeorani: "(424)",
+          baslik: "Figma & More",
+        },
+        {
+          derskategori: "SEO",
+          puan: "5",
+          zaman: "7 hours",
+          izlenmeorani: "(12)",
+          baslik: " Keyword Research",
+        },
+        //   //SEO
+        // 5
+        // (12)
+        // Keyword Research
+        // Keyword suggestion tool provides comprehensive details & suggestions.
+
+        // 7 hours
+      ];
+
+      document.getElementById("web").innerHTML = dersler[0].derskategori;
+      document.getElementById("puan").innerHTML = dersler[0].puan;
+      document.getElementById("izlenmeorani").innerHTML =
+        " &nbsp;&nbsp;&nbsp;&nbsp;" + dersler[0].izlenmeorani;
+      document.getElementById("baslik").innerHTML = dersler[0].baslik;
+      document.getElementById("web1").innerHTML = dersler[1].derskategori;
+      document.getElementById("baslik").innerHTML = dersler[1].baslik;
+      document.getElementById("zamns").innerHTML = dersler[1].zaman;
+      document.getElementById("parantex").innerHTML = dersler[1].izlenmeorani;
+      document.getElementById("weeeb").innerHTML = dersler[2].derskategori;
+      document.getElementById("puan686").innerHTML = dersler[2].puan;
+      document.getElementById("izlenmeorangutani").innerHTML =
+        dersler[2].izlenmeorani;
+      document.getElementById("baslik1526/").innerHTML = dersler[2].baslik;
+      document.getElementById("time").innerHTML = dersler[2].zaman;
+      //web1  baslik;
+
+      //weeeb
+      //  puan686
+      //    izlenmeorangutani
+      //!    baslik1526/
+      //time
+    </script>
+  </body>
+</html>

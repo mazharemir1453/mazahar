@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üçgen Çevresi</title>
+    <style>
+        body{
+            background-color: rgb(39, 39, 39);
+        }
+    </style>
+</head>
+<body>
+    <img src="data:image/jpeg;base64,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" alt="">
+    <h1>EŞ KENAR ÜÇGEN</h1>
+
+    <br><br>
+    <img src="data:image/png;base64,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" alt="">
+   <h1>İKİZ KENAR ÜÇGEN</h1>
+   <script>
+        function ucgenincevresi() {
+            let birincikenar = prompt("Birinci kenar uzunluğunu girin:");
+            let ikincikenar = prompt("İkinci kenar uzunluğunu girin:");
+            let ucuncukenar = prompt("Üçüncü kenar uzunluğunu girin:");
+
+            birincikenar = parseFloat(birincikenar);
+            ikincikenar = parseFloat(ikincikenar);
+            ucuncukenar = parseFloat(ucuncukenar);
+
+            if (isNaN(birincikenar) || isNaN(ikincikenar) || isNaN(ucuncukenar)) {
+                alert("Lütfen geçerli bir sayı girin.");
+                return;
+            }
+
+            if (birincikenar <= 0 || ikincikenar <= 0 || ucuncukenar <= 0) {
+                alert("Üçgen kenarları pozitif olmalıdır.");
+                return;
+            }
+
+            if (birincikenar === ikincikenar && ikincikenar === ucuncukenar) {
+                alert("EŞKENAR ÜÇGEN OLUŞTU");
+            } else if (
+                (birincikenar === ikincikenar || birincikenar === ucuncukenar || ikincikenar === ucuncukenar) &&
+                (birincikenar + ikincikenar > ucuncukenar && birincikenar + ucuncukenar > ikincikenar && ikincikenar + ucuncukenar > birincikenar)
+            ) {
+                alert("İKİZKENAR ÜÇGEN OLUŞTU");
+            } else if (
+                birincikenar + ikincikenar > ucuncukenar &&
+                birincikenar + ucuncukenar > ikincikenar &&
+                ikincikenar + ucuncukenar > birincikenar
+            ) {
+                alert("HİÇBİR ÜÇGEN OLUŞMADI");
+            } else {
+                alert("Girilen kenarlar bir üçgen oluşturmuyor.");
+            }
+        }
+        ucgenincevresi();
+    </script>
+</body>
+</html>

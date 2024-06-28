@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY KARAVAN</title>
+    <style>
+        body {
+            background-image: url('resimlerim/cv.png');
+            width: 500px;
+            height: 500px;
+            background-size: cover; 
+            background-repeat: no-repeat; 
+            background-position: center; 
+            margin: 0; 
+            padding: 0;
+        }
+
+        ul {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            padding: 0;
+        }
+
+        li {
+            margin-left: 150px;
+            list-style-type: none;
+            text-align: center;
+            padding: 10px;
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+
+        li:hover {
+            border: 5px solid black;
+            box-shadow: 5px 5px 5px  black;
+            text-shadow: 5px 5px 5px  black;
+            display: inline-block;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <span id="bas"><li onclick="bas()">ANASAYFA</li></span>                
+        <span id="bas"><li onclick="bas1()">DOĞA</li></span>                   
+        <span id="bas"><li onclick="bas2()">KAMPYERLERİ</li></span>      
+        <span id="bas"><li onclick="bas3()">İLETİŞİM</li></span>      
+        <span id="bas"><li onclick="bas4()">HAKKIMIZDA</li></span>     <!--       KAMPYERLERİ        İLETİŞİM            -->    
+    </ul>
+    <script>
+        function bas() {
+            window.location.href = 'mazhar.html';
+        }
+        function bas1() {
+            window.location.href = 'site.html';
+        }
+        function bas2() {
+            window.location.href = 'cafe.html';
+        }
+        function bas3() {
+            window.location.href = 'youcubetoomake.html';
+        }
+        function bas4() {
+            window.location.href = 'motorhakkımızda.html';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            color: teal;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+        }
+h2        {
+            
+ color: rgb(4, 0, 255);
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+ text-shadow:15px 15px 5px black;
+       }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+
+    </div>
+    <script>
+        let urunler = [
+            {adi: "apple watch", fiyat: "2500 TL", resim: "resimlerim/saat.png"},
+            {adi: "samsung telefon", fiyat: "10000 TL", resim: "resimlerim/telefon.png"},
+            {adi: "playstion 5", fiyat: "23000 TL", resim: "resimlerim/ps5.png"}
+        ];
+
+        let container = document.getElementById("container");
+
+        for (let i = 0; i < urunler.length; i++) {
+            container.innerHTML += `<div>
+                    <img src="${urunler[i].resim}">
+                    <h2>${urunler[i].adi}</h2>
+                    <p>${urunler[i].fiyat}</p>
+                </div>`;
+        }
+    </script>
+</body>
+</html>

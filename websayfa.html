@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kişisel İş Web Sitem</title>
+    sty
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hakkimda">Hakkımda</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#projeler">Projeler</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="hakkimda">
+            <h1>Hakkımda</h1>
+            <p>Buraya kendiniz hakkında bilgi yazabilirsiniz.</p>
+        </section>
+        <section id="blog">
+            <h1>Blog</h1>
+            <article>
+                <h2>Blog Yazısı Başlığı</h2>
+                <p>Blog yazısı içeriği...</p>
+            </article>
+        </section>
+        <section id="projeler">
+            <h1>Projeler</h1>
+            <p>Buraya projeleriniz hakkında bilgi yazabilirsiniz.</p>
+        </section>
+        <section id="iletisim">
+            <h1>İletişim</h1>
+            <form action="#">
+                <label for="name">Adınız:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">E-posta:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mesajınız:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit">Gönder</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div class="social-media">
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">LinkedIn</a>
+        </div>
+        <div class="newsletter">
+            <h2>Haber Bülteni Aboneliği</h2>
+            <form action="#">
+                <label for="newsletter-email">E-posta:</label>
+                <input type="email" id="newsletter-email" name="newsletter-email" required>
+                <button type="submit">Abone Ol</button>
+            </form>
+        </div>
+    </footer>
+</body>
+</html>

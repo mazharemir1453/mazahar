@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            background: linear-gradient(to bottom, #001f3f, #001a33);
+            height: 100vh;
+            display: flex;
+            background-image: url(https://img.freepik.com/premium-photo/close-up-planet-earth-biosphere-space-with-stars-galaxy_63762-1154.jpg?w=740);
+            background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: 100% 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .roket {
+            position: relative;
+            width: 50px;
+            height: 100px;
+            background: red;
+            border-radius: 50% 50% 0 0;
+            animation: show 3s ease-in-out infinite;
+        }
+        .roket::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: orange;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px yellow;
+        }
+        .roket::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 10px;
+            height: 30px;
+            background: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px yellow;
+        }
+        .roket1{
+            position: relative;
+            width: 50px;
+            height: 100px;
+            background: red;
+            border-radius: 50% 50% 0 0;
+            animation: mazahr 3s ease-in-out infinite;
+        }
+        .roket1::before {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 20px;
+            height: 20px;
+            background: orange;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px yellow;
+        }
+        .roket1::after {
+            content: '';
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(360deg);
+            width: 10px;
+            height: 30px;
+            background: yellow;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px yellow;
+        }
+        @keyframes show {
+            0% {
+                transform: rotate(-180deg);
+            }
+            100% {
+                transform: translateY(-200vh);
+                margin-right: 2000px;
+                margin-top: -1500px;
+                transition: 20s;
+                transform: rotateX(-360deg);
+            }
+        }
+        /* @keyframes mazahr {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100vh);
+                margin-left: 2000px;
+                margin-top: -1500px;
+                transform: rotate(1deg);
+            } */
+        }
+    </style>
+</head>
+<body>
+    <div class="roket"></div>
+    <!-- <div class="roket1"></div> -->
+</body>
+</html>

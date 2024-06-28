@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do Listesi</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding: 10px;
+    font-size: 18px;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+li button {
+    background: none;
+    border: none;
+    color: #ff6347;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do Listesi</h1>
+        <input type="text" id="taskInput" placeholder="Yeni görev ekleyin...">
+        <button id="addTaskButton">Ekle</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <script>
+document.getElementById('addTaskButton').addEventListener('click', addTask);
+document.getElementById('taskInput').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        addTask();
+    }
+});
+
+function addTask() {
+    const taskInput = document.getElementById('taskInput');
+    const taskText = taskInput.value.trim();
+    if (taskText === '') {
+        return;
+    }
+
+    const taskList = document.getElementById('taskList');
+    const taskItem = document.createElement('li');
+    const taskSpan = document.createElement('span');
+    taskSpan.textContent = taskText;
+    taskItem.appendChild(taskSpan);
+
+    const deleteButton = document.createElement('button');
+    deleteButton.textContent = 'Sil';
+    deleteButton.addEventListener('click', function() {
+        taskList.removeChild(taskItem);
+    });
+    taskItem.appendChild(deleteButton);
+
+    taskItem.addEventListener('click', function() {
+        taskItem.classList.toggle('completed');
+    });
+
+    taskList.appendChild(taskItem);
+    taskInput.value = '';
+}
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Açılır MENÜ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .container {
+            box-shadow: 1px 1px 5px black;
+            height:20px;
+            width: 150px;
+        }
+        .conta {
+            margin-right: 150px;
+            cursor: pointer;
+        }
+        .conta1 {
+            margin-top: -18px;
+            margin-right: 100px;
+        }
+        .conta2 {
+            margin-top: -18px;
+        }
+        .conta3 {
+            margin-left: 40px;
+            margin-top: -18px;
+        }
+        .conta4 {
+            margin-left: 80px;
+            margin-top: -18px;
+        }
+        .conta5 {
+            margin-left: 130px;
+            margin-top: -18px;
+        }
+        .conta5:hover {
+            margin-left: -35px;
+            transition: 0.5s;
+        }
+        .side-menu {
+            position: fixed;
+            left: -250px;
+            top: 0;
+            width: 250px;
+            height: 100%;
+            background-color: #333;
+            color: white;
+            transition: left 0.3s ease;
+            box-shadow: 2px 0 5px rgb(0, 0, 0);
+        }
+        .side-menu:hover{
+            background-color: rgb(0, 255, 255);
+    transition: 20s;
+        }
+        .side-menu ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .side-menu ul li {
+            padding: 15px;
+            border-bottom: 1px solid #ff0000;
+        }
+        .side-menu ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .side-menu ul li a:hover{
+            color: black;
+            transition: 10s;
+        }
+        li{
+            font-family: "Sofia", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div class="container">
+            <div class="conta">
+                <i class="fa-solid fa-bars" id="menuIcon"></i>
+            </div>
+            <div class="conta1"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="conta2"><i class="fa-solid fa-bell"></i></div>
+            <div class="conta3"><i class="fa-solid fa-id-card"></i></div>
+            <div class="conta4"><i class="fa-solid fa-location-dot"></i></div>
+            <div class="conta5"><i class="fa-solid fa-truck-fast"></i></div>
+        </div>
+    </center>
+
+    <div class="side-menu" id="sideMenu">
+        <ul>
+            <li><a href="#">Alışveriş</a></li>
+            <li><a href="#">Sepetim</a></li>
+            <li><a href="#">Anasayfa</a></li>
+            <li><a href="#">Hakkımızda</a></li> 
+            <li><a href="#">Menüler</a></li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById('menuIcon').addEventListener('click', function() {
+            let sideMenu = document.getElementById('sideMenu');
+            if (sideMenu.style.left == '-250px') {
+                sideMenu.style.left = '0';
+            } else {
+                sideMenu.style.left = '-250px';
+            }
+        });
+    </script>
+</body>
+</html>

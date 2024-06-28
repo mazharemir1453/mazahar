@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY CAFE</title>
+    <!-- El yazısı fontunu ekleyelim -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&display=swap">
+    <style>
+        body {
+            background-image: url(resimlerim/kahfelogo.png);
+            background-repeat: no-repeat;
+            background-size: cover; /* Arka plan resmi tam ekranı kaplasın */
+            margin: 0; /* Varsayılan margin'leri kaldırın */
+            padding: 0; /* Varsayılan padding'leri kaldırın */
+            height: 100vh; /* Body'nin tam ekran yüksekliği olsun */
+            display: flex;
+            justify-content: flex-end; /* İçeriği sağa yasla */
+        }
+
+        * {
+            box-sizing: border-box;
+            /* font-family: sans-serif; */
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 8%;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .logo {
+            cursor: pointer;
+            width: 120px;
+            margin-right: 20px;
+        }
+
+        nav .nav-links a {
+            color: #fff;
+            font-size: 26px;
+            text-decoration: none;
+            /* El yazısı fontunu uygulayalım */
+            font-family: 'Dancing Script', cursive;
+        }
+
+        nav .nav-links {
+            display: flex;
+            column-gap: 20px;
+        }
+
+        a {
+            font-family: "Sofia", sans-serif;
+            background-color:blueviolet;
+            width: 257px;
+            transition: 3s;
+            font-size: x-large;
+            text-decoration: none;
+        }
+
+        a:hover {
+            background-color:rgb(255, 166, 0);
+         color: aqua;
+         transition: 3s;
+        }
+
+        .logo img {
+            /* İstediğiniz boşluğu ayarlayın */
+            width: 150px;
+            height: 150px;
+            border-radius: 100px;
+        }
+        .yazi{
+          text-align: center;
+          margin-top: 200px;
+          animation-duration:15s;
+          font-size: x-large;
+          font-family: sans-serif;
+          animation-name: show;
+          animation-iteration-count: infinite;
+               }
+               @keyframes show{
+                0%{color:rgb(74, 355, 289); font-weight: 900;font-family:'Times New Roman', Times, serif;}
+                15%{color: rgb(255, 166, 0);font-weight: 800;font-family:cursive;}
+                30%{color: rgb(55, 555,55);font-weight: 100; font-family:fantasy;}
+                50%{color: rgba(555, 4874, 48, 784); font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;}
+                75%{color: darkred;font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;}
+                100%{color: lawngreen;font-family: 'Courier New', Courier, monospace;}
+               }
+    </style>
+    <title>YZLMC355 KAHVEHANE</title>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img src="resimlerim/resm.png" alt="">
+            </div>
+            <div class="nav-links">
+                <a href="latte.html" class="latte">LATTE</a>
+                <a href="#">MOKKA</a>
+                <a href="#">AMERİCANO</a>
+                <a href="#">TÜRK GAHVESİ</a><br>
+            </div>
+        </nav>
+        <div class="yazi">
+          <h1>YZLMC355 KAHVEHANE YAKINDA HİZMETİNİZDE...</h1>
+        </div>
+    </div>
+    
+</body>
+
+</html>
